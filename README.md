@@ -1,6 +1,6 @@
 [![news-image-20261119](https://make.fun/badge/news-image-20261119.svg)](https://make.fun/c/news-image-20261119)
-[![rank](https://make.fun/badge/news-image-20261119/Tenguu0/world-front-page/rank.svg)](https://make.fun/c/news-image-20261119)
-[![reward](https://make.fun/badge/news-image-20261119/Tenguu0/world-front-page/reward.svg)](https://make.fun/c/news-image-20261119)
+[![rank](https://make.fun/badge/news-image-20261119/Tenguu0/news-image-20261119/rank.svg)](https://make.fun/c/news-image-20261119)
+[![reward](https://make.fun/badge/news-image-20261119/Tenguu0/news-image-20261119/reward.svg)](https://make.fun/c/news-image-20261119)
 
 # World Front Page — Thursday 19 November 2026
 
