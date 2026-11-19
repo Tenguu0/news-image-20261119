@@ -332,10 +332,12 @@ function render(pg: Page): void {
   }
   drawSkyline(pg);
 
-  // Lead deck, full width under the headline block.
+  // Lead deck, full width under the headline block. Full-ink rule + ink
+  // text: the deck is the second-most prominent copy on the page, so it
+  // gets the same contrast as the headlines instead of faint grey.
   y = 318;
-  pg.ruleH(M, y - 8, RW, SKY, 1);
-  y = pg.para(LEAD.deck, M, y, 2, BODY_INK, RW, 17);
+  pg.ruleH(M, y - 8, RW, INK, 1);
+  y = pg.para(LEAD.deck, M, y, 2, INK, RW, 17);
   y += 10;
   pg.ruleH(M, y, RW, INK, 4);
   pg.ruleH(M, y + 6, RW, INK, 1);
@@ -343,7 +345,7 @@ function render(pg: Page): void {
 
   // Secondary stories: 2 columns x 3 rows.
   const colW = Math.floor((RW - 24) / 2); // 466
-  const rowH = 178;
+  const rowH = 182; // a little air between rows; also fills the empty band at the page foot
   const colX = [M, M + colW + 24];
   STORIES.forEach((s, i) => {
     const cx = colX[i % 2];
@@ -354,7 +356,7 @@ function render(pg: Page): void {
     headLines.forEach((ln, j) => pg.drawText(ln, cx, cy + 28 + j * 26, 3, INK, true));
     const bodyY = cy + 28 + headLines.length * 26 + 4;
     pg.para(s.body, cx, bodyY, 2, BODY_INK, colW, 17);
-    if (i % 2 === 0) pg.ruleV(cx + colW + 12, cy, rowH - 14, SKY, 1);
+    if (i % 2 === 0) pg.ruleV(cx + colW + 12, cy, rowH - 14, INK, 1); // full-ink column divider: the SKY rule was nearly invisible against the paper
   });
   y += 3 * rowH + 6;
 
